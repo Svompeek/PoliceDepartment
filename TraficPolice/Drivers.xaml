@@ -1,0 +1,46 @@
+﻿<Page x:Class="TraficPolice.Drivers"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TraficPolice"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Drivers" IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label Content="Водители" FontSize="21" HorizontalAlignment="Center"
+               Grid.Row="0"/>
+        <DataGrid x:Name="DriversList" Grid.Row="1" AutoGenerateColumns="False"
+                  Margin="20 10 0 0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding numDriverDocument}" Width="*" Header="Номер удостоверения"/>
+                <DataGridTextColumn Binding="{Binding name}" Width="*" Header="ФИО"/>
+                <DataGridTextColumn Binding="{Binding adres}" Width="*" Header="Адрес"/>
+                <DataGridTextColumn Binding="{Binding phone}" Width="*" Header="Телефон"/>
+                <DataGridTextColumn Binding="{Binding password}" Width="*" Header="Пароль"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Click="BtnEdit"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Click="BtnDelete"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить" Grid.Row="2" HorizontalAlignment="Left" Margin="20 10 0 10"
+                FontSize="15" Width="150" Click="Btn_Add"/>
+    </Grid>
+</Page>

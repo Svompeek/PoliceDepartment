@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c71d3bfc105480898b4c989e16e2f13" Name="Diagram1">
+        <EntityTypeShape EntityType="TrafficPoliceModel.Car" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.Driver" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.DriversCars" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.Incident" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.IncidentsVolations" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.Inspector" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.State" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrafficPoliceModel.Violation" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_DriversCars_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_Incident_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_DriversCars_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_Incident_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_Incident_Inspector" ManuallyRouted="false" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_IncidentsVolations_Incident1" ManuallyRouted="false" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_IncidentsVolations_State" ManuallyRouted="false" />
+        <AssociationConnector Association="TrafficPoliceModel.FK_IncidentsVolations_Violation1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
